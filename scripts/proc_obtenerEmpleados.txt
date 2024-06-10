@@ -1,0 +1,5 @@
+DELIMITER $$
+CREATE PROCEDURE proc_obtenerEmpleados()
+       BEGIN
+         SELECT * from empleados;
+       END$$-
