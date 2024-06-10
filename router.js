@@ -30,9 +30,20 @@ router.get('/edit/:id',(req,res)=>{
     });
 });
 
+router.get('/delete/:id', (req, res)=>{
+    const id = req.params.id;
+    conexion.query('delete from empleados where id = ?',[id],(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            res.redirect('/');
+        }
+    });
+});
 
 //Guardar registros
 router.post('/save', crud.save);
+//Actualizar registro
 router.post('/update',crud.edit);
 
 module.exports = router;

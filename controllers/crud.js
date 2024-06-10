@@ -1,5 +1,5 @@
 const conexion = require('../connection/db');
-
+const Swal = require('sweetalert2');
 //Guardar registros
 exports.save = (req,res)=>{
     const nombre = req.body.nombre;

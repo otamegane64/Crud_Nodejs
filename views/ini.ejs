@@ -53,7 +53,7 @@
                     <td> <%= empleado.Puesto %> </td>
                     <td>
                         <a href="/edit/<%= empleado.ID %>" class="btn btn-outline-info">Editar</a>
-                        <a href="/delete" class="btn btn-outline-danger">Borrar</a>
+                        <a href="/delete/<%= empleado.ID %>" class="btn btn-outline-danger">Borrar</a>
                     </td>
                 </tr>
             <% }) %>
